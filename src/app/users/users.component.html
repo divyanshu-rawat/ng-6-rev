@@ -1,6 +1,15 @@
-<p>
-  users works!
-</p>
+<h2>Users</h2>
 
-
-<h1> divyanshu </h1>
+<ul>
+  <li *ngFor="let user of users$">
+    <a routerLink="/details/{{ user.id }}"></a>
+    <ul>
+      <li>
+        {{ user.email }}
+      </li>
+      <li>
+        <a href="{{ user.website }}"> {{ user.website }}</a>
+      </li>
+    </ul>
+  </li>
+</ul>
