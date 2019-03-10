@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+// router.events has different events, if you need to get the NavigationEnd you need to filter as follows. Try this,
+
+  currentUrl: String;
+
+  constructor( private router: Router ) {
+      router.events.subscribe(() => this.currentUrl = router.url.toString());
+  }
 
   ngOnInit() {
   }
