@@ -2,13 +2,13 @@
 
 <ul>
   <li *ngFor="let user of users$">
-    <a routerLink="/details/{{ user.id }}"></a>
+    <a routerLink="/details/{{ user.id }}">{{ user.name }}</a>
     <ul>
       <li>
         {{ user.email }}
       </li>
       <li>
-        <a href="{{ user.website }}"> {{ user.website }}</a>
+        <a href="http://{{ user.website }}"> {{ user.website }}</a>
       </li>
     </ul>
   </li>

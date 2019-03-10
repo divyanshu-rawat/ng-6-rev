@@ -10,7 +10,7 @@ const routes: Routes = [
     component: UsersComponent
   },
   {
-    path: 'details/:id',
+    path: 'details/:id', // colom here makes the second part of the URL, a parameter.
     component: DetailsComponent
   },
   {
